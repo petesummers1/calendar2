@@ -30,6 +30,12 @@ tbody td:hover {
   white-space: nowrap;
 }
 
+/* Change the font of the calendar to Arial */
+.calendar-container {
+  font-family: Arial, sans-serif;
+}
+
+
 /* Style for the dates to appear as the top row */
 thead {
   position: sticky;
