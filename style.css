@@ -11,7 +11,7 @@ td {
   padding: 10px;
   text-align: center;
   border: 1px solid #ccc;
-  width: calc(100% / 30);
+  width: calc(100% / 31);
 }
 
 th {
@@ -35,4 +35,16 @@ thead {
   position: sticky;
   top: 0;
   background-color: #eee;
+}
+
+/* Style for the activity column */
+td.activity {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Style for the activity rows */
+tr.activity-row td {
+  text-align: left;
+  font-weight: normal;
 }
