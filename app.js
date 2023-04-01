@@ -43,4 +43,19 @@ function generateCalendar(year, month) {
   calendar += '</tr></table>';
 
   // Return the generated calendar
- 
+  return calendar;
+}
+
+// Add the calendar to the page
+document.getElementById('calendar').innerHTML = generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
+
+// Make the month scrollable
+var calendar = document.getElementById('calendar');
+calendar.style.overflowX = 'scroll';
+calendar.style.whiteSpace = 'nowrap';
+calendar.style.display = 'flex';
+
+// Make the dates appear as the top row
+var thead = calendar.getElementsByTagName('thead')[0];
+thead.style.position = 'sticky';
+thead.style.top = '0';
