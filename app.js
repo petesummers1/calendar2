@@ -16,7 +16,24 @@ function generateCalendar(year, month) {
   var calendar = '<table>';
 
   // Add the month and year to the calendar
-  calendar += '<thead><tr><th colspan="' + numDays + '">' + monthNames[month] + ' ' + year + '</th></tr>';
+  calendar += '<thead><tr><th class="activity"></th><th colspan="' + numDays + '">' + monthNames[month] + ' ' + year + '</th></tr>';
+
+  // Add the activity rows to the calendar
+  calendar += '<tr class="activity-row"><td class="activity">Activity 1</td>';
+  for (var i = 1; i <= numDays; i++) {
+    calendar += '<td></td>';
+  }
+  calendar += '</tr>';
+  calendar += '<tr class="activity-row"><td class="activity">Activity 2</td>';
+  for (var i = 1; i <= numDays; i++) {
+    calendar += '<td></td>';
+  }
+  calendar += '</tr>';
+  calendar += '<tr class="activity-row"><td class="activity">Activity 3</td>';
+  for (var i = 1; i <= numDays; i++) {
+    calendar += '<td></td>';
+  }
+  calendar += '</tr>';
 
   // Add the dates to the calendar
   calendar += '<tr>';
@@ -26,19 +43,4 @@ function generateCalendar(year, month) {
   calendar += '</tr></table>';
 
   // Return the generated calendar
-  return calendar;
-}
-
-// Add the calendar to the page
-document.getElementById('calendar').innerHTML = generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
-
-// Make the month scrollable
-var calendar = document.getElementById('calendar');
-calendar.style.overflowX = 'scroll';
-calendar.style.whiteSpace = 'nowrap';
-calendar.style.display = 'flex';
-
-// Make the dates appear as the top row
-var thead = calendar.getElementsByTagName('thead')[0];
-thead.style.position = 'sticky';
-thead.style.top = '0';
+ 
